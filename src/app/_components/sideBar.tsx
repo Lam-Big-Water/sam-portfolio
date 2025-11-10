@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-const sideBar = () => {
+const SideBar = () => {
   return (
-    <div className="py-4 border-r border-black text-black font-medium">
+    <div className="col-[1/2] row-span-2 py-4 border-r border-black text-black font-medium max-md:hidden">
       <nav className="h-full flex flex-col justify-between">
         <ul className="flex flex-col gap-8">
           <li>
@@ -28,4 +28,4 @@ const sideBar = () => {
   );
 };
 
-export default sideBar;
+export default SideBar;
