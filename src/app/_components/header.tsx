@@ -1,6 +1,3 @@
-import React from "react";
-import Link from "next/link";
-
 const Header = () => {
   return (
     <header className="row-span-2 grid grid-rows-[160px_1fr] text-black font-medium max-sm:hidden">
