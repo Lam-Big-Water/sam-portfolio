@@ -1,0 +1,14 @@
+{
+  "HomePage": {
+    "LocaleLayout": {
+      "title": "next-intl Beispiel"
+    },
+    "title": "Welcome to my website",
+    "description": "This is a multilingual website",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact"
+    }
+  }
+}

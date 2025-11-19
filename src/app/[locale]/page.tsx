@@ -1,7 +1,7 @@
-import Header from "./_components/header";
-import Introduce from "./_components/introduce";
-import Post from "./_components/post";
-import SideBar from "./_components/sideBar";
+import Header from "@/app/_components/header";
+import Introduce from "@/app/_components/introduce";
+import Post from "@/app/_components/post";
+import SideBar from "@/app/_components/sideBar";
 
 const Home = () => {
   return (

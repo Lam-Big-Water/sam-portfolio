@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer utilities {
+
+    @media (max-width: 540px) {
+    .xs\:hidden {
+      display: none !important;
+    }
+
+    .xs\:block {
+      display: block !important;
+    }
+
+    .xs\:flex {
+      display: flex !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .sm\:hidden {
+      display: none !important;
+    }
+    .sm\:block {
+      display: block !important;
+    }
+    .sm\:flex {
+      display: flex !important;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .md\:hidden {
+      display: none !important;
+    }
+    .md\:block {
+      display: block !important;
+    }
+    .md\:flex {
+      display: flex !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:hidden {
+      display: none !important;
+    }
+    .lg\:block {
+      display: block !important;
+    }
+    .lg\:flex {
+      display: flex !important;
+    }
+  }
+
+
+}
+
+.wrapper {
+  overflow: clip;
+}
+
+.fadeout-horizontal {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 2rem,
+    black calc(100% - 2rem),
+    transparent
+  );
+}
+
+.marquee {
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  padding-left: 2.8rem;
+  gap: 2.8rem;
+  width: max-content;
+  animation: marquee-move-text 10s linear infinite var(--direction, forwards);
+}
+
+.marquee-item {
+  border: 1.6px solid black;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.marquee-item svg {
+  width: 34px;
+  height: auto;
+}
+
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
+  }
+}
+

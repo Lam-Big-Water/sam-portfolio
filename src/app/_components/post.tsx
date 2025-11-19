@@ -1,16 +1,17 @@
 import Link from "next/link";
-import { Marquee } from "./marquee";
+import { Marquee2 } from "@/app/_components/marquee2";
 
 const Post = () => {
   return (
-    <article className="overflow-auto h-full row-span-2 grid grid-rows-[160px_1fr] text-black font-medium max-[33.75rem]:hidden">
-      <div className="p-4 w-full h-full flex flex-col justify-between">
-        <Marquee />
+    <article className="w-full row-span-2 grid grid-rows-[160px_1fr] text-black font-medium xs:hidden">
+      <div className="overflow-hidden p-4 flex flex-col justify-between">
+        <Marquee2 />
         <div className="flex justify-between border-b pt-2 border-black">
           <p className="">Featured Articles</p>
           <Link href="seeAll">❖ See All</Link>
         </div>
       </div>
+
       <div className="overflow-auto">
         <div className="h-full flex flex-col border-r border-black p-4">
           <div>
