@@ -9,7 +9,7 @@ export default function LanguageSwitcher() {
     const pathname = usePathname();
 
     const languages = [
-        { code: 'zh-TW', name: '繁體中文' },
+        { code: 'zh-HK', name: '繁體中文' },
         { code: 'en', name: 'English' }
     ];
 
