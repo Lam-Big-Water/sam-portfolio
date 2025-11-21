@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Introduce = () => {
   return (
-    <main className="overflow-y-auto overflow-x-hidden snap-y snap-mandatory row-span-2  text-black font-medium">
+    <main className="overflow-y-auto overflow-x-hidden snap-y snap-mandatory row-span-2 text-black dark:text-amber-50 bg-amber-50 dark:bg-black font-medium">
       <Items />
       <Items />
       <Items />
@@ -15,11 +15,11 @@ const Items = () => {
     <div className="grid grid-rows-[160px_1fr] snap-center">
       <div className="p-4 w-full h-full flex flex-col justify-between">
         <h1 className="text-6xl font-black pb-4">Tech</h1>
-        <p className="text-right border-b border-black">12.21.2025</p>
+        <p className="text-right border-b border-black dark:border-amber-50">12.21.2025</p>
       </div>
 
       <div>
-        <div className="h-full flex flex-col border-r border-black p-4">
+        <div className="h-full flex flex-col border-r border-black dark:border-amber-50 p-4">
           <div>
             <Image
               width={200}

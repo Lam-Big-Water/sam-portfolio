@@ -5,7 +5,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     let locale = await requestLocale;
 
     // 確保語言是支援的
-    if (!locale || !routing.locales.includes(locale as any)) {
+    if (!locale || !routing.locales.includes(locale as "en" | "zh-HK")) {
         locale = routing.defaultLocale;
     }
 

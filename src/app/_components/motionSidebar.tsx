@@ -54,7 +54,7 @@ const MotionSidebar = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const { height } = useDimensions(containerRef);
   return (
-    <div className="absolute top-0 left-0 h-full md:hidden">
+    <div className="absolute top-0 left-0 h-full md:hidden text-black dark:text-amber-50 bg-amber-50 dark:bg-black">
       <motion.nav
         initial={false}
         animate={toggle ? "open" : "closed"}

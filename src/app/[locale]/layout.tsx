@@ -9,6 +9,10 @@ import { notFound } from "next/navigation";
 import "./globals.css";
 import { routing } from "@/i18n/routing";
 
+import { cookies } from "next/headers";
+
+import { ThemeProvider, Theme } from "../_context/themeProvider";
+
 type LayoutProps = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -43,6 +47,8 @@ export function generateStaticParams() {
 
 export default async function RootLayout({ children, params }: LayoutProps) {
   const { locale } = await params;
+  const saveTheme = (await cookies()).get("color-theme");
+  const theme = (saveTheme?.value as Theme) || "light";
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -59,7 +65,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-svh flex justify-center items-center bg-gray-400 p-4`}
       >
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <ThemeProvider initialTheme={theme}>{children}</ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

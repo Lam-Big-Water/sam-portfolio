@@ -3,10 +3,10 @@ import { Marquee2 } from "@/app/_components/marquee2";
 
 const Post = () => {
   return (
-    <article className="w-full row-span-2 grid grid-rows-[160px_1fr] text-black font-medium xs:hidden">
+    <article className="w-full row-span-2 grid grid-rows-[160px_1fr] text-black dark:text-amber-50 bg-amber-50 dark:bg-black font-medium xs:hidden">
       <div className="overflow-hidden p-4 flex flex-col justify-between">
         <Marquee2 />
-        <div className="flex justify-between border-b pt-2 border-black">
+        <div className="flex justify-between border-b pt-2 border-black dark:border-amber-50">
           <p className="">Featured Articles</p>
           <Link href="seeAll">❖ See All</Link>
         </div>

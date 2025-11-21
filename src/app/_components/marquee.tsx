@@ -8,7 +8,7 @@ import {
 
 export const Marquee = () => {
   return (
-    <div className="wrapper">
+    <div className="wrapper ">
       <div
         className="marquee fadeout-horizontal"
         style={{ "--numItems": "5" } as React.CSSProperties}
