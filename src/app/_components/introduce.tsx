@@ -15,18 +15,21 @@ const Items = () => {
     <div className="grid grid-rows-[160px_1fr] snap-center">
       <div className="p-4 w-full h-full flex flex-col justify-between">
         <h1 className="text-6xl font-black pb-4">Tech</h1>
-        <p className="text-right border-b border-black dark:border-amber-50">12.21.2025</p>
+        <p className="text-right border-b border-black dark:border-amber-50">
+          12.21.2025
+        </p>
       </div>
 
       <div>
         <div className="h-full flex flex-col border-r border-black dark:border-amber-50 p-4">
           <div>
             <Image
+              src="/keyboard.png"
+              alt="post photo"
               width={200}
               height={100}
               className="w-full"
-              src="/post.avif"
-              alt="post photo"
+              unoptimized // 禁用 Next.js 图片优化
             />
 
             <h2 className="text-2xl font-bold py-2">
