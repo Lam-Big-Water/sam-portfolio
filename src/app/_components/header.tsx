@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl";
-import LanguageSwitcher from "./languageSwitcher";
 const Header = () => {
   const t = useTranslations("HomePage");
   return (
@@ -10,7 +9,6 @@ const Header = () => {
       </div>
       <div className="row-[2/3] h-full border-r border-black dark:border-amber-50 p-4 max-md:col-[1/2] max-sm:hidden">
         <h2 className="mt-auto text-5xl font-black">NO.2</h2>
-        <LanguageSwitcher />
       </div>
     </header>
   );

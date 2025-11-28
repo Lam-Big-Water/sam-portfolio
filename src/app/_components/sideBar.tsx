@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import MotionSidebar from "./motionSidebar";
-import { Sun, Moon } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "@/app/_context/themeProvider";
+import LanguageSwitcher from "./languageSwitcher";
 
 const SideBar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -13,25 +14,35 @@ const SideBar = () => {
         <nav className="h-full flex flex-col justify-between">
           <ul className="flex flex-col gap-8">
             <li>
-              <Link href="/work">Work</Link>
+              <Link href="/work">Animate</Link>
             </li>
             <li>
-              <Link href="/studio">Studio</Link>
+              <Link href="/studio">Components</Link>
             </li>
             <li>
-              <Link href="/blog">Blog</Link>
+              <Link href="/blog">Figma</Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact">Github</Link>
+            </li>
+            <li>
+              <Link href="/contact">Blog</Link>
             </li>
           </ul>
 
-          <div>
-            <p className="py-4">@MagazineDope</p>
-            <p>Subscribe</p>
-
-            <button onClick={toggleTheme}>
-              {theme === "light" ? <Sun /> : <Moon />}
+          <div className="flex flex-col gap-4">
+            <LanguageSwitcher />
+            <button className="flex gap-2" onClick={toggleTheme}>
+              <span>Theme</span>
+              {theme === "light" ? (
+                <span>
+                  <Sun />
+                </span>
+              ) : (
+                <span>
+                  <Moon />
+                </span>
+              )}
             </button>
           </div>
         </nav>
