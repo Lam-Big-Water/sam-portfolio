@@ -7,13 +7,13 @@ const Post = () => {
       <div className="overflow-hidden p-4 flex flex-col justify-between">
         <Marquee2 />
         <div className="flex justify-between border-b pt-2 border-black dark:border-amber-50">
-          <p className="">Featured Articles</p>
+          <p className="text-lg font-bold">Utility</p>
           <Link href="seeAll">❖ See All</Link>
         </div>
       </div>
 
-      <div className="overflow-auto">
-        <div className="h-full flex flex-col border-r border-black p-4">
+      <div className="overflow-auto scrollbar-thin">
+        <div className="h-full flex flex-col border-r border-black p-4 ">
           <div>
             <div className="flex justify-between items-center">
               <h1 className="font-black text-7xl">1</h1>
@@ -24,23 +24,25 @@ const Post = () => {
               Blonde - Widespread Acclaim
             </h2>
 
-            <div className="flex justify-between font-bold py-2">
+            <div className="flex justify-between font-bold py-2 max-[1100px]:flex-col">
               <p>By Richard Carnation</p>
               <span>5 Min Read</span>
             </div>
 
-            <p>
+            <p className="py-2 max-[1100px]:truncate">
               Blonde received widespread acclaim, with critics praising Oceans
               introspective lyrics and the albums unconventional
             </p>
 
-            <Link className="block w-full text-right" href="/see-more">
-              ↠ See More
-            </Link>
+            <div className="w-full flex justify-end items-center">
+              <Link className="text-right py-2" href="/see-more">
+                ↠ See More
+              </Link>
+            </div>
           </div>
         </div>
 
-        <div className="h-full flex flex-col border-r border-black p-4">
+        <div className="h-full flex flex-col border-r border-black p-4 ">
           <div>
             <div className="flex justify-between items-center">
               <h1 className="font-black text-7xl">1</h1>
@@ -56,7 +58,7 @@ const Post = () => {
               <span>5 Min Read</span>
             </div>
 
-            <p>
+            <p className="max-[1100px]:truncate">
               Blonde received widespread acclaim, with critics praising Oceans
               introspective lyrics and the albums unconventional
             </p>
@@ -67,7 +69,7 @@ const Post = () => {
           </div>
         </div>
 
-        <div className="h-full flex flex-col border-r border-black p-4">
+        <div className="h-full flex flex-col border-r border-black p-4 ">
           <div>
             <div className="flex justify-between items-center">
               <h1 className="font-black text-7xl">1</h1>
@@ -83,7 +85,7 @@ const Post = () => {
               <span>5 Min Read</span>
             </div>
 
-            <p>
+            <p className="max-[1100px]:truncate">
               Blonde received widespread acclaim, with critics praising Oceans
               introspective lyrics and the albums unconventional
             </p>

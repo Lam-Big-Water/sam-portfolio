@@ -1,8 +1,9 @@
+import { Codesandbox, Github } from "lucide-react";
 import Image from "next/image";
 
 const Introduce = () => {
   return (
-    <main className="overflow-y-auto overflow-x-hidden snap-y snap-mandatory row-span-2 text-black dark:text-amber-50 bg-amber-50 dark:bg-black font-medium">
+    <main className="scrollbar-thin overflow-y-auto overflow-x-hidden snap-y snap-mandatory row-span-2 text-black dark:text-amber-50 bg-amber-50 dark:bg-black font-medium">
       <Items />
       <Items />
       <Items />
@@ -21,7 +22,7 @@ const Items = () => {
       </div>
 
       <div>
-        <div className="h-full flex flex-col border-r border-black dark:border-amber-50 p-4">
+        <div className="min-h-100 flex flex-col border-r border-black dark:border-amber-50 p-4">
           <div>
             <Image
               src="/keyboard.png"
@@ -40,6 +41,13 @@ const Items = () => {
               Blonde received widespread acclaim, with critics praising Oceans
               introspective lyrics and the albums unconventional
             </p>
+
+            <div className="w-full flex justify-end items-center" >
+              <a href="#" className="inline-flex py-4">
+              <span className="text-lg font-bold">visit ⇢</span>
+              <span><Codesandbox /></span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
