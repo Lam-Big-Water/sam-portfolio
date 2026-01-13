@@ -60,9 +60,9 @@ export default async function RootLayout({ children, params }: LayoutProps) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} data-theme={theme}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-svh flex justify-center items-center bg-gray-400 p-4`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-svh flex justify-center items-center bg-slate-50 dark:bg-slate-950 p-4`}
       >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider initialTheme={theme}>{children}</ThemeProvider>

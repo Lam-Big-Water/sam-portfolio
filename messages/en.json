@@ -10,5 +10,8 @@
       "about": "About",
       "contact": "Contact"
     }
+  },
+    "LocaleLayout": {
+    "title": "Welcome"
   }
 }
