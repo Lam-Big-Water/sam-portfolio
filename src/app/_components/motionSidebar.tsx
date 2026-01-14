@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, stagger, Variants } from "motion/react";
+import { motion, stagger, AnimatePresence } from "motion/react";
 import { useDimensions } from "../_utils/useDimensions";
 import Link from "next/link";
 import LanguageSwitcher from "./languageSwitcher";
@@ -32,7 +32,7 @@ const itemVariants = {
   },
 };
 
-const sidebarVariants: Variants = {
+const sidebarVariants = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
     transition: {
@@ -59,10 +59,16 @@ const MotionSidebar = () => {
   const { height } = useDimensions(containerRef);
   return (
     <div className="absolute top-0 left-0 h-full md:hidden text-black dark:text-amber-50 bg-amber-50 dark:bg-black">
-      <motion.nav
-        initial={false}
-        animate={toggle ? "open" : "closed"}
-        custom={height}
+          <AnimatePresence>
+
+      {toggle && (      <motion.nav
+        // initial={false}
+        // animate={toggle ? "open" : "closed"}
+        // custom={height}
+        initial={"closed"}
+      animate={"open"}
+      exit={"closed"}
+      custom={height}
       >
         <motion.div
           ref={containerRef}
@@ -108,13 +114,16 @@ const MotionSidebar = () => {
             </motion.p>
           </motion.div>
         </div>
-        <button
-          onClick={() => setToggle(!toggle)}
-          className="font-black text-2xl text-black outline-none border-none absolute top-0 left-0 w-12 h-12 select-none"
-        >
-          {toggle ? "◉" : "◎"}
-        </button>
-      </motion.nav>
+      </motion.nav>)}
+                </AnimatePresence>
+
+      <button
+        onClick={() => setToggle(!toggle)}
+        className="font-black text-2xl text-black outline-none border-none absolute top-0 left-0 w-12 h-12 select-none"
+      >
+        {toggle ? "◉" : "◎"}
+      </button>
+
     </div>
   );
 };
