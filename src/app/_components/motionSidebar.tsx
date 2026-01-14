@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, stagger, AnimatePresence } from "motion/react";
+import { motion, stagger, Variants, AnimatePresence } from "motion/react";
 import { useDimensions } from "../_utils/useDimensions";
 import Link from "next/link";
 import LanguageSwitcher from "./languageSwitcher";
@@ -32,7 +32,7 @@ const itemVariants = {
   },
 };
 
-const sidebarVariants = {
+const sidebarVariants: Variants = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
     transition: {
